@@ -69,6 +69,9 @@ controls:
     configuration_profiles:
 #      - paths: ../platforms/macos/declaration-profiles/*.json
 #      - paths: ../platforms/macos/configuration-profiles/*.mobileconfig
+      - path: ../platforms/macos/declaration-profiles/macos27-deferral.json
+        labels_exclude_any:
+          - macOS 27 beta testers
       - path: ../platforms/macos/configuration-profiles/disable-bluetooth-file-sharing.mobileconfig
         labels_include_all:
         - Department - Engineering
@@ -85,7 +88,8 @@ controls:
   # Read more here:
   #   • https://fleetdm.com/guides/enforce-disk-encryption
   ###########################################################
-  # enable_disk_encryption: true
+  enable_disk_encryption: true
+  enable_recovery_lock_password: true
 
   ###########################################################
   # Managed OS updates
@@ -105,6 +109,9 @@ controls:
   # windows_updates:
   #   deadline_days: 7
   #   grace_period_days: 2
+  ipados_updates:
+    deadline: "2026-09-30"
+    minimum_version: "26.5"
 
   ###########################################################
   # Script library
