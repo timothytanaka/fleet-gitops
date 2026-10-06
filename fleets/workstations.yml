@@ -99,7 +99,7 @@ controls:
   #   • https://fleetdm.com/guides/enforce-os-updates
   ###########################################################
   macos_updates:
-     deadline: "2026-09-39"
+     deadline: "2026-09-29"
      minimum_version: "26.5"
   #   update_new_hosts: true
   # windows_updates:
