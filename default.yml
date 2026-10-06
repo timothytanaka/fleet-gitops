@@ -23,7 +23,11 @@ org_settings:
     # Read more:
     #   • https://fleetdm.com/docs/configuration/yaml-files#org-info
     ###########################################################
-    org_name: My organization
+    org_name: Timcorp
+    webhook_settings:
+      activities_webhook:
+        enable_activities_webhook: true
+        destination_url: https://webhook.site/25572da3-ff92-4213-acb1-6089f0304dea
 
   server_settings:
     ###########################################################
